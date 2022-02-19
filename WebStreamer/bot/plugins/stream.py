@@ -80,8 +80,9 @@ async def private_receive_handler(c: Client, m: Message):
 <i><u>Your Remote Upload Link Generated.</u></i>\n
 <b> File Name :</b> <i>{}</i>\n
 <b> File Size :</b> <i>{}</i>\n
-<b> Link 🔗 :</b> <i>{}</i>\n
-<i> Contact For Any Help @SID12O </i>"""
+<b> Link 🔗 :</b> <code>{}</code>\n
+<b>🔥Copy This Link & Paste In Your Streaam.net Dashboard In Remote Upload Fot Upload This Video.</b>\n
+<i>💥Contact For Any Help @SID12O </i>"""
 
         await log_msg.reply_text(text=f"**Uploaded By :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n** 🔗Link :** `{stream_link}`", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
