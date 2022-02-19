@@ -11,15 +11,14 @@ db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
 <i>👋 Hᴇʏ,</i>{}\n
-<i><b>Send or Forward Me Any File Here Which You Want To Upload Remotely In 10drives.com.</b></i>"""
+<i><b>Send or Forward Me Any File Here Which You Want To Upload Remotely In Streaam.net.</b></i>"""
 
 HELP_TEXT = """
-<i>👋 Hᴇʏ,</i>{}\n
-<i><b>Send or Forward Me Any File Here Which You Want To Upload Remotely In 10drives.com.</b></i>"""
+<b>🔥For Bot Related Any Help Contact @LegendAkshay</b>"""
 
 ABOUT_TEXT = """
-<i>👋 Hᴇʏ,</i>{}\n
-<i><b>Send or Forward Me Any File Here Which You Want To Upload Remotely In 10drives.com.</b></i>"""
+<b>🔥This Bot Is Only For Streaam.net Users To Made Uploading Easy & Fast.</b>\n
+<b>(If You Are Not User Of Streaam.net So Fill The Form On Website And Start Using or We Banned You From Our Bot.)</b>"""
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -37,9 +36,9 @@ HELP_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('Close', callback_data='close')
         ]]
     )
 
@@ -106,11 +105,11 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>This Is a Private Bot For our PlayerJet / 10Drives.com Users, You have to Join Our Telegram Channel To Verify You</i>",
+                    text="<i>This Is a Private Bot For our Streaam.net Users, You have to Join Our Telegram Channel To Verify You</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [[
-                            InlineKeyboardButton("Join", url=f"https://t.me/{Var.UPDATES_CHANNEL}"), 
-                            InlineKeyboardButton('Refresh', callback_data='home')
+                            InlineKeyboardButton("Join", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+               
                             ]]
                     ),
                     parse_mode="HTML"
@@ -119,7 +118,7 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>Sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ</i> <b><a href='http://t.me/LegendAkshay'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>",
+                    text="<i>Sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ᴄᴏɴᴛᴀᴄᴛ ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ</i> <b><a href='http://t.me/LegendAkshay'>[ Click-Here ]</a></b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True)
                 return
